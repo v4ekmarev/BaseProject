@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">lms-JustCash</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_domain">domain</string>
+</resources>
