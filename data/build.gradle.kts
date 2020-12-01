@@ -9,7 +9,6 @@ android {
     buildToolsVersion("29.0.3")
 
     defaultConfig {
-        applicationId = "com.justcashback.ims_justcash"
         minSdkVersion(23)
         targetSdkVersion(30)
         versionCode(1)
@@ -21,7 +20,9 @@ android {
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
-            proguardFiles("proguard-android-optimize.txt", "proguard-rules.pro")
+        }
+        getByName("debug") {
+            isMinifyEnabled = false
         }
     }
     compileOptions {
@@ -36,6 +37,10 @@ android {
 dependencies {
 
     implementation (project(":domain"))
+
+    implementation(Dependencies.KOTLIN)
+    implementation(Dependencies.CORE)
+    implementation(Dependencies.CHUCK_DEBUG)
 
     dagger()
     room()

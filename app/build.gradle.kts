@@ -41,6 +41,7 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:2.3.1")
 
     implementation(project(":domain"))
+//    implementation(project(":data"))
 
     appCompat()
     lifecycle()
