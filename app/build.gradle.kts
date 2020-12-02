@@ -2,7 +2,7 @@ plugins {
     id("com.android.application")
     id("kotlin-android")
     id("kotlin-kapt")
-    id("kotlin-allopen")
+    id ("kotlin-parcelize")
 }
 
 android {
@@ -33,6 +33,12 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
+
+    sourceSets {
+        getByName("main") {
+            java.srcDir("src/main/kotlin")
+        }
+    }
 }
 
 dependencies {
@@ -41,7 +47,7 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:2.3.1")
 
     implementation(project(":domain"))
-//    implementation(project(":data"))
+    implementation(project(":data"))
 
     appCompat()
     lifecycle()
