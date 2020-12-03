@@ -5,6 +5,7 @@ import com.justcashback.data.di.modules.NetModule
 import com.justcashback.data.di.modules.PersistenceModule
 import com.justcashback.data.di.modules.RepositoryModule
 import com.justcashback.data.net.api.MainApi
+import com.justcashback.domain.repository.AuthorizationRepository
 import com.justcashback.domain.repository.MerchantRepository
 import dagger.BindsInstance
 import dagger.Component
@@ -22,4 +23,5 @@ interface DataComponent {
 
     fun provideMainApi(): MainApi
     fun provideMerchantRepository(): MerchantRepository
+    fun provideAuthorizationRepository(): AuthorizationRepository
 }

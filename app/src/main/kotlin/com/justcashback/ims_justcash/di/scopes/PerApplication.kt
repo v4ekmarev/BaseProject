@@ -1,4 +1,4 @@
-package com.vladlen.exmapleproject.di
+package com.justcashback.ims_justcash.di.scopes
 
 import javax.inject.Scope
 

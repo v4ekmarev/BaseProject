@@ -6,8 +6,10 @@ import org.gradle.api.artifacts.dsl.DependencyHandler
  */
 object Dependencies {
     const val KOTLIN = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${BuildDependenciesVersions.KOTLIN}"
-    const val COROUTINES = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${BuildDependenciesVersions.COROUTINES}"
-    const val COROUTINES_ANDROID = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${BuildDependenciesVersions.COROUTINES}"
+    const val COROUTINES =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-core:${BuildDependenciesVersions.COROUTINES}"
+    const val COROUTINES_ANDROID =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-android:${BuildDependenciesVersions.COROUTINES}"
 
     const val ROOM_RUNTIME = "androidx.room:room-runtime:${BuildDependenciesVersions.ROOM}"
     const val ROOM_KTX = "androidx.room:room-ktx:${BuildDependenciesVersions.ROOM}"
@@ -21,6 +23,8 @@ object Dependencies {
         "androidx.lifecycle:lifecycle-livedata-ktx:${BuildDependenciesVersions.LIFECYCLE}"
     const val LIFECYCLE_RUNTIME =
         "androidx.lifecycle:lifecycle-runtime:${BuildDependenciesVersions.LIFECYCLE}"
+    const val LIFECYCLE_COMMON_JAVA8 =
+        "androidx.lifecycle:lifecycle-common-java8:${BuildDependenciesVersions.LIFECYCLE}"
 
     const val CORE_KTX = "androidx.core:core-ktx:${BuildDependenciesVersions.CORE_KTX}"
     const val CORE = "androidx.core:core:${BuildDependenciesVersions.CORE_KTX}"
@@ -55,7 +59,8 @@ object Dependencies {
         "com.squareup.okhttp3:logging-interceptor:${BuildDependenciesVersions.LOGGING}"
 
     const val MOSHI = "com.squareup.moshi:moshi-kotlin:${BuildDependenciesVersions.MOSHI}"
-    const val MOSHI_CONVERTER = "com.squareup.retrofit2:converter-moshi:${BuildDependenciesVersions.MOSHI}"
+    const val MOSHI_CONVERTER =
+        "com.squareup.retrofit2:converter-moshi:${BuildDependenciesVersions.MOSHI}"
     const val MOSHI_CODEGEN =
         "com.squareup.moshi:moshi-kotlin-codegen:${BuildDependenciesVersions.MOSHI}"
 
@@ -71,7 +76,8 @@ object Dependencies {
     const val FIREBASE_CORE = "com.google.firebase:firebase-core:${BuildDependenciesVersions.CORE}"
 
     const val PLAY_CORE = "com.google.android.play:core:${BuildDependenciesVersions.PLAY_CORE}"
-    const val CHUCK_DEBUG = "com.readystatesoftware.chuck:library:${BuildDependenciesVersions.CHUCK_DEBUG}"
+    const val CHUCK_DEBUG =
+        "com.readystatesoftware.chuck:library:${BuildDependenciesVersions.CHUCK_DEBUG}"
 }
 
 fun DependencyHandler.firebase() {
@@ -100,6 +106,7 @@ fun DependencyHandler.lifecycle() {
     implementation(Dependencies.LIFECYCLE_EXTENSIONS)
     implementation(Dependencies.LIFECYCLE_VIEWMODEL)
     implementation(Dependencies.LIFECYCLE_LIVEDATA)
+    implementation(Dependencies.LIFECYCLE_COMMON_JAVA8)
 }
 
 fun DependencyHandler.retrofit() {

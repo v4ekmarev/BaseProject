@@ -5,14 +5,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.justcashback.ims_justcash.R
+import com.justcashback.ims_justcash.databinding.FragmentDashboardBinding
+import com.justcashback.ims_justcash.ui.base.BaseFragment
+import com.justcashback.ims_justcash.ui.base.viewbindings.withrefceltion.viewBinding
 
-class DashboardFragment : Fragment() {
+class DashboardFragment : BaseFragment(R.layout.fragment_dashboard) {
 
     private lateinit var dashboardViewModel: DashboardViewModel
+
+    val asd: FragmentDashboardBinding by viewBinding()
 
     override fun onCreateView(
         inflater: LayoutInflater,
