@@ -1,5 +1,4 @@
-include ':data'//include ':data'
+include ':data'
 include ':domain'
 include ':app'
-rootProject.name = "lms-JustCash"
-
+rootProject.name = "Base-Project"
